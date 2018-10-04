@@ -75,7 +75,7 @@ const ticTacToe = {
     playWinSound() {
         if (this.audio == null) {
             this.audio = document.createElement('audio');
-            this.audio.src = '/assests/audios/Win.mp3';
+            this.audio.src = '../audios/Win.mp3';
         }
         this.audio.play();
     }
