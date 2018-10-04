@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="/assests/css/main.css">
+    <link rel="stylesheet" href="/assests/libs/fontawesome-all.min.css">
+    <script src="/assests/libs/angular.min.js"></script>
+    <script src="/assests/js/app.js"></script>
+    <link rel="shortcut icon" href="/assests/images/favicon.png" type="image/x-icon">
+    <script src="/assests/js/ticTacToe.js"></script>
+    <script src="/assests/js/ticTacToeModel.js"></script>
+    <script src="/assests/js/ticTacToeController.js"></script>
+    <script src="/assests/js/boxes.js"></script>
+</head>
+<body ng-app="ticTacToeGame">
+    <div id="container">
+        <div id="TicTacToe-container" ng-controller="gameController">
+            <div ng-show="false">
+                <!-- <audio src="/assests/audios/gameTheme.mp3" autoplay loop="false"></audio> -->
+            </div>
+            <div id="score">
+                <span ng-model="pl1Score">Player X : {{board.player1}}</span>
+                <span class="winStatus" ng-show="true">Player {{board.statusPlayerWon}} WON</span>
+                <span>Player <span class="red">{{currentPlayer}}</span> Move</span>
+                <span ng-model="pl2Score">Player O : {{board.player2}}</span>
+            </div>
+            <div id="game">
+                <div class="row" id="row1">
+                        <div ng-repeat="x in [1,2,3]" class="box" id="box{{x}}" ng-click="playerMove(x-1)">
+                            <img ng-src={{boxes[x-1].imgUrl}} alt="">
+                        </div>
+                </div>
+                <div class="row" id="row2">
+                    <div ng-repeat="x in [4,5,6]" class="box" id="box{{x}}" ng-click="playerMove(x-1)">
+                        <img ng-src={{boxes[x-1].imgUrl}} alt="">
+                </div>
+                </div>
+                <div class="row" id="row3">
+                    <div ng-repeat="x in [7,8,9]" class="box" id="box{{x}}" ng-click="playerMove(x-1)">
+                        <img ng-src={{boxes[x-1].imgUrl}} alt="">
+                </div>
+                </div>
+            </div>
+            <div>
+                <button id="resetBtn" ng-click="board.resetBoard()">Reset</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
