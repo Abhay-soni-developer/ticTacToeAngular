@@ -1,7 +1,7 @@
 body{
     padding: 0px;
     margin: 0px;
-    background-image: url(/assests/images/Game-bgc.png);
+    background-image: url(../images/Game-bgc.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
