@@ -39,6 +39,7 @@ const ticTacToe = {
         this.resetBoard();
     },
 
+    //when status Player won is st to " " still it shows old value
     statusBar(playerWhoWon){
 
         if(playerWhoWon==1){
@@ -51,7 +52,6 @@ const ticTacToe = {
         setTimeout( function(){
             this.statusPlayerWon=" ";
             this.showWinStatus="false";
-            console.log("hello");
         }, 2000);
     },
 
@@ -75,7 +75,7 @@ const ticTacToe = {
     playWinSound() {
         if (this.audio == null) {
             this.audio = document.createElement('audio');
-            this.audio.src = '../audios/Win.mp3';
+            this.audio.src = '/assests/audios/Win.mp3';
         }
         this.audio.play();
     }

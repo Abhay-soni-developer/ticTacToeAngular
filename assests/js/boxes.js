@@ -26,7 +26,7 @@ class Boxes {
         } else if (this.state == 0) {
             this.imgUrl = 'assests/images/O.png';
         } else {
-            this.imgUrl = "assests/images/alpha.png";
+            this.imgUrl = 'assests/images/tr.png';
         }
     }
 

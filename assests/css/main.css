@@ -26,9 +26,9 @@ img {
     width: 100%;
 }
 
-#container {
+/* #container {
 
-}
+} */
 
 #TicTacToe-container{
     display: flex;
@@ -37,7 +37,7 @@ img {
 }
 
 #score {
-    width: 600px;
+    width: 40%;
     font-family: cursive;
     font-size: 24px;
     font-weight: bolder;
@@ -70,7 +70,6 @@ img {
     border-radius: 15px;
     cursor: pointer;
     overflow: hidden;
-    height: 190px;
 }
 
 #resetBtn {
@@ -100,38 +99,31 @@ img {
     color: red;
 }
 
-@media only screen and (max-width:1300px){
-    .box {
-        height: 160px;
-    }
+.green {
+    color: green;
 }
 
-@media only screen and (max-width:1200px){
-    .box {
-        height: 140px;
-    }
+.blue {
+    color: blue;
 }
 
-
-@media only screen and (max-width:1000px){
-    .box {
-        height: 120px;
-    }
-}
-
-@media only screen and (max-width:900px){
-    .box {
-        height: 190px;
-    }
-
+@media(max-width:768px){
     #game {
-        width: 70%;
+        width: 90%;
+        grid-row-gap: 0.2em;
     }
 
+    .row {
+        grid-column-gap: 0.2em;
+    }
+    
+   
 }
 
-@media only screen and (max-width:768px){
-    .box {
-        height: ;
+@media(max-width:1200px){
+    #score {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 }

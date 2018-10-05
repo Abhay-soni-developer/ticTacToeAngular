@@ -14,18 +14,20 @@
     <script src="assests/js/ticTacToeModel.js"></script>
     <script src="assests/js/ticTacToeController.js"></script>
     <script src="assests/js/boxes.js"></script>
+    <script src="assests/js/maintainBox.js"></script>
 </head>
 <body ng-app="ticTacToeGame">
     <div id="container">
         <div id="TicTacToe-container" ng-controller="gameController">
-            <div ng-show="false">
-               <audio src="assests/audios/gameTheme.mp3" autoplay loop="false"></audio>
+            <div>
+                <audio autoplay>
+                    <source src="assests/audios/gameTheme.mp3">
+              </audio>
             </div>
             <div id="score">
-                <span ng-model="pl1Score">Player X : {{board.player1}}</span>
-                <!-- <span class="winStatus" ng-show="false">Player {{board.statusPlayerWon}} WON</span> -->
-                <span>Player <span class="red">{{currentPlayer}}</span> Move</span>
-                <span ng-model="pl2Score">Player O : {{board.player2}}</span>
+                <span ng-model="pl1Score">Player <i class="fas fa-times red"></i> : <span class="red">{{board.player1}}</span></span>
+                <span>Player <span class="green">{{currentPlayer}}</span> Move</span>
+                <span ng-model="pl2Score">Player <i class="far fa-circle blue"></i> : <span class="blue">{{board.player2}}</span></span>
             </div>
             <div id="game">
                 <div class="row" id="row1">
@@ -44,6 +46,7 @@
                 </div>
                 </div>
             </div>
+            <div><span class="winStatus" ng-show="true">Player <span class="red">{{board.statusPlayerWon}}</span> WON</span></div>
             <div>
                 <button id="resetBtn" ng-click="board.resetBoard()">Reset</button>
             </div>
