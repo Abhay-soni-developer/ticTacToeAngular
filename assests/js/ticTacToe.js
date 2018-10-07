@@ -4,7 +4,6 @@ const ticTacToe = {
     boxes: [],
     audio: null,
     statusPlayerWon:"",
-    showWinStatus:"false",
 
     winningConditions: [
         [0, 1, 2],
@@ -43,15 +42,12 @@ const ticTacToe = {
     statusBar(playerWhoWon){
 
         if(playerWhoWon==1){
-            this.statusPlayerWon="X";
+            this.statusPlayerWon="X Won";
         }else if(playerWhoWon==0){
-            this.statusPlayerWon="O";
+            this.statusPlayerWon="O Won";
         }
-        this.showWinStatus="true";
-        
-        setTimeout( function(){
+        setTimeout( ()=>{
             this.statusPlayerWon=" ";
-            this.showWinStatus="false";
         }, 2000);
     },
 

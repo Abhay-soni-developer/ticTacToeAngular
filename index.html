@@ -6,8 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="assests/css/main.css">
-    <link rel="stylesheet" href="assests/libs/fontawesome-all.min.css">
-    <script src="assests/libs/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"></script>
     <script src="assests/js/app.js"></script>
     <link rel="shortcut icon" href="assests/images/favicon.png" type="image/x-icon">
     <script src="assests/js/ticTacToe.js"></script>
@@ -15,6 +14,7 @@
     <script src="assests/js/ticTacToeController.js"></script>
     <script src="assests/js/boxes.js"></script>
     <script src="assests/js/maintainBox.js"></script>
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">">
 </head>
 <body ng-app="ticTacToeGame">
     <div id="container">
@@ -46,7 +46,7 @@
                 </div>
                 </div>
             </div>
-            <div><span class="winStatus" ng-show="true">Player <span class="red">{{board.statusPlayerWon}}</span> WON</span></div>
+            <div><span class="winStatus red">{{board.statusPlayerWon}}</span></div>
             <div>
                 <button id="resetBtn" ng-click="board.resetBoard()">Reset</button>
             </div>
